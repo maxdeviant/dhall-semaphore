@@ -1,5 +1,6 @@
 { Agent = ./Agent.dhall
 , Block = ./Block.dhall
+, Condition = ./Condition.dhall
 , Container = ./Container.dhall
 , EnvironmentVariable = ./EnvironmentVariable.dhall
 , Job = ./Job.dhall
