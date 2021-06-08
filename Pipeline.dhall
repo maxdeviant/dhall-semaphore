@@ -1,23 +1,14 @@
-let EnvironmentVariable = ./EnvironmentVariable.dhall
-
-let Secret = ./Secret.dhall
-
-let MachineType = ./MachineType.dhall
-
-let OsImage = ./OsImage.dhall
-
-let Machine = { type : MachineType, os_image : OsImage }
-
-let Container = ./Container.dhall
-
 let Agent = ./Agent.dhall
 
 let Block = ./Block.dhall
+
+let ExecutionTimeLimit = ./ExecutionTimeLimit.dhall
 
 let Pipeline =
       { version : Text
       , name : Optional Text
       , agent : Agent
+      , execution_time_limit : Optional ExecutionTimeLimit
       , blocks : List Block.Type
       }
 

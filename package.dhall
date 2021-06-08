@@ -3,6 +3,7 @@
 , Condition = ./Condition.dhall
 , Container = ./Container.dhall
 , EnvironmentVariable = ./EnvironmentVariable.dhall
+, ExecutionTimeLimit = ./ExecutionTimeLimit.dhall
 , Job = ./Job.dhall
 , MachineType = ./MachineType.dhall
 , OsImage = ./OsImage.dhall
