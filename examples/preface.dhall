@@ -12,11 +12,12 @@ let pipeline
       , agent.containers = None (List semaphore.Container.Type)
       , blocks =
         [ semaphore.Block::{
+          , name = Some "Inspect Linux environment"
           , task = semaphore.Task::{
             , jobs =
               [ semaphore.Job::{
-                , name = Some "Check environment variables"
-                , commands = [ "echo \$SEMAPHORE_PIPELINE_ID", "pwd" ]
+                , name = Some "Print Environment variable"
+                , commands = [ "echo \$SEMAPHORE_PIPELINE_ID" ]
                 }
               ]
             }

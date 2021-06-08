@@ -8,12 +8,10 @@ let DockerRunParameters =
       , entrypoint : Optional Text
       }
 
-let EnvVars = List EnvironmentVariable
-
-let Secrets = List Secret
-
 let InjectedParameters =
-      { env_vars : Optional EnvVars, secrets : Optional Secrets }
+      { env_vars : Optional (List EnvironmentVariable)
+      , secrets : Optional (List Secret)
+      }
 
 let ContainerParameters = DockerRunParameters ⩓ InjectedParameters
 
@@ -22,8 +20,8 @@ let defaultContainerParameters
     = { user = None Text
       , command = None Text
       , entrypoint = None Text
-      , env_vars = None EnvVars
-      , secrets = None Secrets
+      , env_vars = None (List EnvironmentVariable)
+      , secrets = None (List Secret)
       }
 
 let ContainerParametersSchema =
