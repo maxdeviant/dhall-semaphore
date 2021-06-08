@@ -10,6 +10,7 @@ let pipeline
         , os_image = semaphore.OsImage.ubuntu1804
         }
       , agent.containers = None (List semaphore.Container.Type)
+      , execution_time_limit = None semaphore.ExecutionTimeLimit
       , blocks =
         [ semaphore.Block::{
           , name = Some "Run in Linux environment"
